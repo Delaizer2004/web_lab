@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - <%= resume.name %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <img src="/avatar.jpg" alt="Фото" class="avatar">
+            <h1><%= resume.name %></h1>
+            <p>Посада: <%= resume.position %></p>
+        </header>
+
+        <section class="about">
+            <h2>Про мене</h2>
+            <p><%= resume.about %></p>
+        </section>
+
+        <section class="skills">
+            <h2>Навички</h2>
+            <ul>
+                <% resume.skills.forEach(skill => { %>
+                    <li><%= skill %></li>
+                <% }) %>
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2>Досвід роботи</h2>
+            <p><strong><%= resume.experience.company %></strong> — <%= resume.experience.role %> (<%= resume.experience.years %>)</p>
+            <p><%= resume.experience.details %></p>
+        </section>
+
+        <section class="education">
+            <h2>Освіта</h2>
+            <p><strong><%= resume.education.university %></strong> — <%= resume.education.specialty %> (<%= resume.education.years %>)</p>
+        </section>
+
+        <footer>
+            <p>Контакти: <%= resume.contact %></p>
+        </footer>
+    </div>
+</body>
+</html>

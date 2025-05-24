@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+        .resume-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 1000px;
+            overflow: hidden;
+        }
+        .resume-header {
+            background-color: #2d3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .resume-header img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .resume-sidebar {
+            background-color: #2d3e50;
+            color: white;
+            padding: 20px;
+            border-right: 3px solid white;
+        }
+        .resume-sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .resume-sidebar .contact-info p,
+        .resume-sidebar .languages p {
+            margin: 5px 0;
+        }
+        .resume-sidebar .section-title {
+            margin-top: 20px;
+            font-size: 20px;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+        .resume-main {
+            padding: 20px;
+        }
+        .resume-main .section-title {
+            font-size: 24px;
+            border-bottom: 2px solid #2d3e50;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+        .resume-main p {
+            margin: 5px 0;
+        }
+        .skill-level {
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            background-color: #2d3e50;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .skill-level-empty {
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            background-color: #7e8d9d;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .skills p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .skills p span {
+            display: flex;
+        }
+        .language-switch{
+            margin: 20px;
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="language-switch">
+        <button class="btn btn-primary" onclick="switchLanguage('uk')">Українською</button>
+        <button class="btn btn-secondary" onclick="switchLanguage('en')">English</button>
+
+    </div>
+
+<div class="container resume-container">
+    <div class="row">
+        <div class="col-md-4 resume-sidebar">
+            <div class="text-center">
+                <img src="photo.jpg" alt="Фото профілю">
+                <h2 id="name">Дмитро Мамчич</h2>
+            </div>
+            <div class="contact-info">
+                <h3 class="section-title" id="contact-title">Контакт</h3>
+                <p id="email">Email: delaizer2004@gmail.com</p>
+                <p id="phone">Телефон: +380685045506</p>
+                <p id="address">Адреса: вул. Героїв Майдану 11, 18024 Черкаси</p>
+            </div>
+            <div class="languages">
+                <h3 class="section-title" id="languages-title">Мови</h3>
+                <p id="ukrainian">Українська: Рідна</p>
+                <p id="english">Англійська: B1 (Середній)</p>
+            </div>
+        </div>
+        <div class="col-md-8 resume-main">
+            <div class="profile">
+                <h3 class="section-title" id="profile-title">Профіль</h3>
+                <p id="profile-text">Захоплений і мотивований програміст зі спеціалізацією в інженерії програмного забезпечення. Маю гарну основу в Java, що охоплює об’єктно-орієнтоване програмування, володію додатковими засобами Maven, JDBC та розробкою програмного забезпечення. Після освоєння Java розширив свої знання, вивчаючи JavaScript. Володію досвідом роботи з фронтенд технологіями. Маю гарні знання алгоритмів та структури даних, а також роботу з базами даних PostgreSQL та вмію працювати з системою контролю версій Git. Відзначаюсь аналітичним мисленням та здатністю ефективно працювати в команді. Постійно прагну до вдосконалення своїх знань та навичок, слідкую за новими технологіями в сфері технологій.</p>
+                <p id="projects-text">Також надано проєкти, розроблені мною на мовах Java (project 1-2) та HTML, CSS, JavaScript (project 3), за посиланням:</p>
+                <p><a href="https://github.com/Delaizer2004/project.git" target="_blank" id="github-link">https://github.com/Delaizer2004/project.git</a></p>
+            </div>
+            <div class="education">
+                <h3 class="section-title" id="education-title">Освіта</h3>
+                <p><strong id="degree">Інженерія програмного забезпечення</strong></p>
+                <p id="university">Черкаський державний технологічний університет (ЧДТУ)</p>
+                <p id="education-period">Період навчання -- 01.09.2022 - теперішній час | Черкаси, Україна</p>
+                <p id="education-courses">Основні дисципліни: Алгоритми та структури даних, Бази даних, Об'єктно-орієнтоване програмування</p>
+            </div>
+            <div class="skills">
+                <h3 class="section-title" id="skills-title">Навички</h3>
+                <p id="communication">Комунікація <span><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level-empty"></div></span></p>
+                <p id="organization">Організація <span><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level-empty"></div><div class="skill-level-empty"></div></span></p>
+                <p id="punctuality">Пунктуальність <span><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level-empty"></div></span></p>
+                <p id="programming-languages">Мови програмування: Java, JavaScript, PostgreSQL <span><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level"></div><div class="skill-level-empty"></div></span></p>
+            </div>
+            <div class="hobbies">
+                <h3 class="section-title" id="hobbies-title">Хобі</h3>
+                <p id="hobby1">Подорожі</p>
+                <p id="hobby2">Вивчення нового</p>
+                <p id="hobby3">Полюбляю вивчати нові речі, по більшій мірі вони пов’язані з комп'ютером та різними мовами програмування.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const content = {
+        uk: {
+            name: "Дмитро Мамчич",
+            contactTitle: "Контакт",
+            email: "Email: delaizer2004@gmail.com",
+            phone: "Телефон: +380685045506",
+            address: "Адреса: вул. Героїв Майдану 11, 18024 Черкаси",
+            languagesTitle: "Мови",
+            ukrainian: "Українська: Рідна",
+            english: "Англійська: B1 (Середній)",
+            profileTitle: "Профіль",
+            profileText: "Захоплений і мотивований програміст зі спеціалізацією в інженерії програмного забезпечення. Маю гарну основу в Java, що охоплює об’єктно-орієнтоване програмування, володію додатковими засобами Maven, JDBC та розробкою програмного забезпечення. Після освоєння Java розширив свої знання, вивчаючи JavaScript. Володію досвідом роботи з фронтенд технологіями. Маю гарні знання алгоритмів та структури даних, а також роботу з базами даних PostgreSQL та вмію працювати з системою контролю версій Git. Відзначаюсь аналітичним мисленням та здатністю ефективно працювати в команді. Постійно прагну до вдосконалення своїх знань та навичок, слідкую за новими технологіями в сфері технологій.",
+            projectsText: "Також надано проєкти, розроблені мною на мовах Java (project 1-2) та HTML, CSS, JavaScript (project 3), за посиланням:",
+            githubLink: "https://github.com/Delaizer2004/project.git",
+            educationTitle: "Освіта",
+            degree: "Інженерія програмного забезпечення",
+            university: "Черкаський державний технологічний університет (ЧДТУ)",
+            educationPeriod: "Період навчання -- 01.09.2022 - теперішній час | Черкаси, Україна",
+            educationCourses: "Основні дисципліни: Алгоритми та структури даних, Бази даних, Об'єктно-орієнтоване програмування",
+            skillsTitle: "Навички",
+            communication: "Комунікація",
+            organization: "Організація",
+            punctuality: "Пунктуальність",
+            programmingLanguages: "Мови програмування: Java, JavaScript, PostgreSQL",
+            hobbiesTitle: "Хобі",
+            hobby1: "Подорожі",
+            hobby2: "Вивчення нового",
+            hobby3: "Полюбляю вивчати нові речі, по більшій мірі вони пов’язані з комп'ютером та різними мовами програмування."
+        },
+        en: {
+            name: "Dmytro Mamchych",
+            contactTitle: "Contact",
+            email: "Email: delaizer2004@gmail.com",
+            phone: "Phone: +380685045506",
+            address: "Address: Heroiv Maidanu St, 11, 18024 Cherkasy",
+            languagesTitle: "Languages",
+            ukrainian: "Ukrainian: Native",
+            english: "English: B1 (Intermediate)",
+            profileTitle: "Profile",
+            profileText: "Enthusiastic and motivated programmer with a specialization in software engineering. I have a good foundation in Java, covering object-oriented programming, with additional skills in Maven, JDBC and software development. After mastering Java, he expanded his knowledge by learning JavaScript. I have experience working with front-end technologies. I have a good knowledge of algorithms and data structures, as well as work with PostgreSQL databases and know how to work with the Git version control system. I am distinguished by analytical thinking and the ability to work effectively in a team. I constantly strive to improve my knowledge and skills, follow new technologies in the field of technology.",
+            projectsText: "Also provided are the projects developed by me in Java (project 1-2) and HTML, CSS, JavaScript (project 3), via the link:",
+            githubLink: "https://github.com/Delaizer2004/project.git",
+            educationTitle: "Education",
+            degree: "Software Engineering",
+            university: "Cherkasy State Technological University (CSTU)",
+            educationPeriod: "Period of study -- 01.09.2022 - Present | Cherkasy, Ukraine",
+            educationCourses: "Key courses: Algorithms and Data Structures, Databases, Object-Oriented Programming",
+            skillsTitle: "Skills",
+            communication: "Communication",
+            organization: "Organization",
+            punctuality: "Punctuality",
+            programmingLanguages: "Programming Languages: Java, JavaScript, PostgreSQL",
+            hobbiesTitle: "Hobbies",
+            hobby1: "Traveling",
+            hobby2: "Learning new things",
+            hobby3: "I enjoy learning new things, mostly related to computers and various programming languages."
+        }
+    };
+
+    function switchLanguage(lang) {
+        document.getElementById("name").innerText = content[lang].name;
+        document.getElementById("contact-title").innerText = content[lang].contactTitle;
+        document.getElementById("email").innerText = content[lang].email;
+        document.getElementById("phone").innerText = content[lang].phone;
+        document.getElementById("address").innerText = content[lang].address;
+        document.getElementById("languages-title").innerText = content[lang].languagesTitle;
+        document.getElementById("ukrainian").innerText = content[lang].ukrainian;
+        document.getElementById("english").innerText = content[lang].english;
+        document.getElementById("profile-title").innerText = content[lang].profileTitle;
+        document.getElementById("profile-text").innerText = content[lang].profileText;
+        document.getElementById("projects-text").innerText = content[lang].projectsText;
+        document.getElementById("github-link").innerText = content[lang].githubLink;
+        document.getElementById("education-title").innerText = content[lang].educationTitle;
+        document.getElementById("degree").innerText = content[lang].degree;
+        document.getElementById("university").innerText = content[lang].university;
+        document.getElementById("education-period").innerText = content[lang].educationPeriod;
+        document.getElementById("education-courses").innerText = content[lang].educationCourses;
+        document.getElementById("skills-title").innerText = content[lang].skillsTitle;
+        document.getElementById("communication").innerText = content[lang].communication;
+        document.getElementById("organization").innerText = content[lang].organization;
+        document.getElementById("punctuality").innerText = content[lang].punctuality;
+        document.getElementById("programming-languages").innerText = content[lang].programmingLanguages;
+        document.getElementById("hobbies-title").innerText = content[lang].hobbiesTitle;
+        document.getElementById("hobby1").innerText = content[lang].hobby1;
+        document.getElementById("hobby2").innerText = content[lang].hobby2;
+        document.getElementById("hobby3").innerText = content[lang].hobby3;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 10px 0 5px;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
