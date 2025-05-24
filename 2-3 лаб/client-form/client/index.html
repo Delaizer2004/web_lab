@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма клієнта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Форма клієнта</h2>
+    <form id="clientForm">
+        <input type="text" placeholder="Ім'я" name="first_name" required><br>
+        <input type="text" placeholder="Прізвище" name="last_name" required><br>
+        <input type="email" placeholder="Email" name="email" required><br>
+        <input type="tel" placeholder="Телефон" name="phone"><br>
+        <input type="date" name="birth_date"><br>
+        <input type="text" placeholder="Адреса" name="address"><br>
+        <input type="text" placeholder="Місто" name="city"><br>
+        <input type="number" placeholder="Поштовий індекс" name="postal_code"><br>
+        <textarea placeholder="Коментар" name="comment"></textarea><br>
+        <button type="submit">Відправити</button>
+    </form>
+
+    <h2>Список клієнтів</h2>
+    <ul id="clientsList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

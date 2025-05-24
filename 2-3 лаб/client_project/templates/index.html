@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клієнтська форма</title>
+    <script defer src="/static/script.js"></script>
+</head>
+<body>
+    <h1>Додати клієнта</h1>
+    <form id="clientForm">
+        <input type="text" id="first_name" placeholder="Ім'я" required><br>
+        <input type="text" id="last_name" placeholder="Прізвище" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="text" id="phone" placeholder="Телефон" required><br>
+        <input type="text" id="address" placeholder="Адреса"><br>
+        <input type="text" id="city" placeholder="Місто"><br>
+        <input type="text" id="country" placeholder="Країна"><br>
+        <button type="submit">Додати</button>
+    </form>
+    <div id="message"></div>
+
+    <h2>Список клієнтів</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th><th>Ім'я</th><th>Прізвище</th><th>Email</th><th>Телефон</th><th>Місто</th><th>Дії</th>
+            </tr>
+        </thead>
+        <tbody id="clientList"></tbody>
+    </table>
+</body>
+</html>
